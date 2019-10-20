@@ -1,0 +1,23 @@
+{
+  "name": "laravel-mix-definitions",
+  "version": "1.0.0",
+  "description": "Plugin for adding custom definitions for DefinePlugin.",
+  "main": "src/LaravelMixDefinitions.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Erutan409/laravel-mix-definitions.git"
+  },
+  "keywords": [
+    "laravel",
+    "mix",
+    "plugin",
+    "definitions",
+    "DefinePlugin"
+  ],
+  "author": "Michael Keyser",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Erutan409/laravel-mix-definitions/issues"
+  },
+  "homepage": "https://github.com/Erutan409/laravel-mix-definitions#readme"
+}
