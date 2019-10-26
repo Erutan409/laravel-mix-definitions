@@ -4,7 +4,7 @@
     <a href="https://www.npmjs.com/package/laravel-mix-definitions"><img src="https://img.shields.io/npm/v/laravel-mix-definitions.svg?style=for-the-badge" alt="npm" /></a> <a href="https://www.npmjs.com/package/laravel-mix-definitions"><img src="https://img.shields.io/npm/dt/laravel-mix-definitions.svg?style=for-the-badge" alt="npm" /></a>
 </h1>
 
-Add and/or update definitions for the webpack build, using Laravel Mix.
+Add and/or update definitions for the webpack build, using [Laravel Mix](https://laravel-mix.com/).
 
 Read more about how definitions work with the [Define Plugin](https://webpack.js.org/plugins/define-plugin/).
 
@@ -18,7 +18,7 @@ npm install laravel-mix-definitions --save-dev
 
 ```js
 const mix = require('laravel-mix');
-require('laravel-mix-definitions').installPlugin(mix);
+require('laravel-mix-definitions');
 
 mix.definition('$', 'jQuery');
 mix.definition('_', 'lodash');

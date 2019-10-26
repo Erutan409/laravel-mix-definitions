@@ -1,20 +1,35 @@
 const Assert = require('assert');
-const Api = require('laravel-mix/src/Api');
 const find = require('lodash/find');
 const forIn = require('lodash/forIn');
+const mix = require('laravel-mix');
 
+// TODO remove in next major release (2.0.0)
+let installed = false;
+
+let definitions = {};
+
+/**
+ * Laravel Mix Definitions
+ *
+ * Provide straight-forward way of defining global constraints.
+ */
 class LaravelMixDefinitions {
 
     /**
      * Install the plugin for Laravel Mix.
      *
-     * @param {Api} mix
+     * @return {this}
      */
-    static installPlugin(mix) {
+    static installPlugin() {
 
-        Assert(mix instanceof Api, 'Expecting valid instance of Laravel Mix Api.');
+        // TODO remove in next major release (2.0.0)
+        if (installed) {
 
-        let definitions = {};
+            console.warn(`Calling ${this.name}.installPlugin() directly is now deprecated and will be removed in the next major version.`);
+
+            return;
+
+        }
 
         mix.extend('definition', new class {
 
@@ -65,8 +80,14 @@ class LaravelMixDefinitions {
 
         });
 
+        // TODO remove in next major release (2.0.0)
+        installed = true;
+
+        return this;
+
     }
 
 }
 
-module.exports = LaravelMixDefinitions;
+// TODO remove in next major release (2.0.0)
+module.exports = LaravelMixDefinitions.installPlugin();
