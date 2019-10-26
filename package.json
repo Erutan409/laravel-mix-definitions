@@ -1,8 +1,11 @@
 {
   "name": "laravel-mix-definitions",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Plugin for adding custom definitions for DefinePlugin.",
   "main": "src/LaravelMixDefinitions.js",
+  "peerDependencies": {
+    "laravel-mix": ">=2.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Erutan409/laravel-mix-definitions.git"
